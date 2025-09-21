@@ -460,11 +460,12 @@ Crea una aplicación web completa para la gestión integral de minimarkets usand
 
 **REQUISITOS TÉCNICOS:**
 
-- **Monorepo:** Turborepo para gestión del monorepo
+- **Monorepo:** pnpm workspaces para gestión del monorepo
+- **Gestor de paquetes:** pnpm para gestión de dependencias
 - **Framework:** NextJS 15.5 con App Router para todas las aplicaciones web
 - **Agente:** Go para el device-agent de seguridad
 - **TypeScript** para seguridad de tipos en todo el monorepo
-- **Base de datos:** PostgreSQL compartida (una instancia por comercio)
+- **Base de datos:** PostgreSQL nativo del sistema operativo (sin Docker)
 - **Vector Database:** pgvector extension para embeddings y búsquedas semánticas
 - **AI/LLM:** OpenAI API o Anthropic Claude API para funcionalidades LLM
 - **UI:** shadcn/ui compartido en packages/ui
@@ -750,8 +751,8 @@ Por favor, crea esto como un **monorepo completo** y listo para producción. Con
 El monorepo debe incluir datos de demostración realistas para poder probar todas las funcionalidades inmediatamente, incluyendo productos con múltiples códigos de barras, **productos propios y en consignación**, **proveedores con catálogos activos**, **domiciliarios con rutas asignadas**, diferentes métodos de costeo configurados, sistemas de fidelización, **embeddings precalculados**, **proveedores terceros con diferentes comisiones (incluyendo 0%)** y **las cuatro aplicaciones funcionando de manera integrada**.
 
 Cuando termines, proporciona instrucciones detalladas sobre cómo:
-1. **Configurar el monorepo** con Turborepo y estructura de carpetas
-2. Configurar la base de datos PostgreSQL con pgvector **compartida**
+1. **Configurar el monorepo** con pnpm workspaces y estructura de carpetas
+2. Configurar la base de datos PostgreSQL nativa con pgvector **compartida**
 3. Configurar las variables de entorno para personalización **y APIs de AI**
 4. **Configurar los subdominios** localmente para desarrollo
 5. **Compilar y ejecutar el device-agent** en Go
